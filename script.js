@@ -7,14 +7,6 @@ PENGAMBILAN ELEMEN DOM (Document Object Model)
 const quoteEl = document.getElementById("quote");
 const authorEl = document.getElementById("author");
 const button = document.getElementById("quote-btn");
-
-/**
- * STATE MANAGEMENT (VARIABEL GLOBAL)
- * Sumber: W3Schools - JavaScript Scope / Stack Overflow
- * Fungsi: Menyimpan indeks dari quote yang muncul sebelumnya. 
- * Diinisialisasi dengan -1 karena indeks array JavaScript selalu dimulai dari 0 (Zero-indexed),
- * sehingga -1 menandakan belum ada quote yang diputar sebelumnya.
- */
 let lastIndex = -1;
 
 /**
@@ -52,12 +44,6 @@ function showQuote() {
    * Fungsi: Membongkar nilai properti dari object (text dan author) langsung ke dalam variabel terpisah.
    */
   const { text, author } = getRandomQuote();
-
-/**
-   * MANIPULASI KONTEN TEKS & TEMPLATE LITERALS
-   * Sumber 1: MDN Web Docs - Node.textContent (Lebih aman dari innerHTML karena mencegah XSS Injection)
-   * Sumber 2: MDN Web Docs - Template literals (Penggunaan backtick `` untuk menyisipkan variabel)
-   */
   quoteEl.textContent = `"${text}"`;
   authorEl.textContent = `— ${author}`;
 }
