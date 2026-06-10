@@ -1,3 +1,12 @@
+
+ // DATA STORAGE (ARRAY OF OBJECTS)
+ // Sumber: MDN Web Docs - JavaScript Arrays & Objects
+ // Struktur: Variabel `QUOTES` dideklarasikan menggunakan lingkup global agar bisa dibaca 
+ // oleh file script lain yang dimuat setelahnya. 
+ // Setiap elemen di dalam Array `[]` merupakan sebuah Object `{}` yang memiliki pasangan 
+ // key-value (`text` untuk isi kutipan, dan `author` untuk penciptanya).
+
+  
 const QUOTES = [
   { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
   { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
